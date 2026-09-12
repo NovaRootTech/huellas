@@ -7,30 +7,37 @@
 
   <title>Política de Privacidad — Huellas</title>
 
-<meta
-name="description"
-content="Política de Privacidad de Huellas — Cada rastro cuenta. Aplicación para reportar y consultar casos de personas desaparecidas."
-
->
+  <meta name="description" content="Política de privacidad de Huellas — Cada rastro cuenta.">
+  <meta name="theme-color" content="#0B416F">
 
   <style>
     :root {
-      --primary: #014174;
-      --primary-dark: #002f55;
-      --background: #f5f8fb;
-      --card: #ffffff;
-      --text: #263238;
-      --muted: #607d8b;
-      --border: #dce4ea;
+      --primary: #0B416F;
+      --primary-dark: #073454;
+      --primary-light: #EAF3F9;
+      --accent: #2C7DB5;
+      --text: #243746;
+      --muted: #647482;
+      --background: #F5F8FB;
+      --surface: #FFFFFF;
+      --border: #E1E8EE;
+      --success: #2E7D5B;
+      --shadow: 0 10px 30px rgba(11, 65, 111, 0.08);
+      --radius: 18px;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family:
+        Inter,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -43,49 +50,141 @@ content="Política de Privacidad de Huellas — Cada rastro cuenta. Aplicación 
       line-height: 1.7;
     }
 
-    header {
-      background: var(--primary);
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        var(--primary-dark) 0%,
+        var(--primary) 55%,
+        #145B8E 100%
+      );
       color: white;
-      padding: 48px 20px;
-      text-align: center;
+      padding: 64px 20px 72px;
     }
 
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 2.2rem;
-      font-weight: 700;
+    .hero-container {
+      max-width: 920px;
+      margin: 0 auto;
     }
 
-    header p {
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .brand-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+    }
+
+    .brand-name {
+      font-size: 25px;
+      font-weight: 750;
+      letter-spacing: -0.4px;
+    }
+
+    .brand-tagline {
+      font-size: 13px;
+      opacity: 0.78;
+      margin-top: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 700px;
       margin: 0;
-      font-size: 1.1rem;
-      opacity: 0.95;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.88);
     }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
+    .last-updated {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .page {
+      max-width: 920px;
+      margin: -28px auto 60px;
       padding: 0 20px;
+      position: relative;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .intro {
+      padding: 30px 34px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(
+        180deg,
+        #FFFFFF 0%,
+        #FBFDFF 100%
+      );
+    }
+
+    .intro strong {
+      color: var(--primary);
+    }
+
+    .content {
+      padding: 10px 34px 38px;
     }
 
     section {
-      background: var(--card);
-      margin-bottom: 24px;
-      padding: 28px 30px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: none;
     }
 
     h2 {
-      margin-top: 0;
+      margin: 0 0 14px;
       color: var(--primary);
-      font-size: 1.45rem;
+      font-size: 23px;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
     }
 
     h3 {
       color: var(--primary-dark);
-      font-size: 1.1rem;
+      font-size: 17px;
+      margin: 22px 0 8px;
     }
 
     p {
@@ -93,6 +192,7 @@ content="Política de Privacidad de Huellas — Cada rastro cuenta. Aplicación 
     }
 
     ul {
+      margin: 10px 0 16px;
       padding-left: 24px;
     }
 
@@ -100,448 +200,466 @@ content="Política de Privacidad de Huellas — Cada rastro cuenta. Aplicación 
       margin-bottom: 8px;
     }
 
-    .notice {
-      background: #eef6fc;
-      border-left: 4px solid var(--primary);
-      padding: 16px 18px;
-      margin: 18px 0;
-      border-radius: 6px;
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0 8px;
     }
 
-    .important {
-      background: #fff8e8;
-      border-left: 4px solid #d99a00;
-      padding: 16px 18px;
+    .highlight {
+      background: var(--primary-light);
+      border: 1px solid #D7E6F1;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .highlight-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .highlight span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .notice {
       margin: 18px 0;
-      border-radius: 6px;
+      padding: 17px 19px;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      background: #F1F7FB;
+      color: var(--text);
     }
 
     .contact {
-      text-align: center;
+      background: linear-gradient(
+        135deg,
+        #F0F6FA,
+        #F8FBFD
+      );
+      border: 1px solid #DCE8F0;
+      border-radius: 15px;
+      padding: 22px;
+      margin-top: 16px;
     }
 
-    .contact a {
+    .contact strong {
       color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
+    .footer {
       text-align: center;
       color: var(--muted);
-      padding: 30px 20px 40px;
-      font-size: 0.9rem;
+      font-size: 13px;
+      padding: 30px 20px 45px;
     }
 
-    @media (max-width: 600px) {
-      header {
-        padding: 36px 18px;
+    .footer strong {
+      color: var(--primary);
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 45px 18px 58px;
       }
 
-      header h1 {
-        font-size: 1.8rem;
+      .hero p {
+        font-size: 16px;
       }
 
-      main {
-        margin-top: 24px;
+      .page {
+        padding: 0 12px;
+        margin-top: -20px;
+      }
+
+      .intro {
+        padding: 24px 21px;
+      }
+
+      .content {
+        padding: 6px 21px 25px;
       }
 
       section {
-        padding: 22px 20px;
+        padding: 25px 0;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-name {
+        font-size: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
 
 </head>
 
-<body>
+<body id="top">
 
-  <header>
-    <h1>Huellas</h1>
-    <p>Cada rastro cuenta</p>
-  </header>
-
-  <main>
+  <header class="hero">
+    <div class="hero-container">
 
 ```
-<section>
-  <h2>Política de Privacidad</h2>
-
-  <p>
-    <strong>Última actualización:</strong> 12 de septiembre de 2026
-  </p>
-
-  <p>
-    Esta Política de Privacidad describe cómo <strong>Huellas</strong>
-    recopila, utiliza, almacena y protege la información proporcionada
-    por los usuarios de la aplicación.
-  </p>
-
-  <p>
-    Huellas es una aplicación orientada a facilitar el reporte,
-    consulta y seguimiento público de casos relacionados con personas
-    desaparecidas.
-  </p>
-
-  <div class="notice">
-    <strong>Importante:</strong> Huellas no requiere que los usuarios
-    creen una cuenta para consultar información pública ni para enviar
-    un reporte ciudadano.
-  </div>
-</section>
-
-<section>
-  <h2>1. Responsable del tratamiento</h2>
-
-  <p>
-    El responsable de la aplicación y del tratamiento de la información
-    es:
-  </p>
-
-  <p>
-    <strong>NovaRoot Technologies</strong>
-  </p>
-
-  <p>
-    Correo electrónico:
-    <a href="mailto:novarootrd@gmail.com">
-      novarootrd@gmail.com
-    </a>
-  </p>
-
-  <p>
-    NovaRoot Technologies administra y mantiene la plataforma Huellas
-    y adopta medidas razonables para proteger la información procesada
-    a través de la aplicación.
-  </p>
-</section>
-
-<section>
-  <h2>2. Información que podemos recopilar</h2>
-
-  <p>
-    Dependiendo de las funciones utilizadas, Huellas puede procesar
-    información proporcionada voluntariamente por el usuario.
-  </p>
-
-  <h3>Reportes de personas desaparecidas</h3>
-
-  <p>
-    Cuando una persona presenta un reporte, puede proporcionar
-    información relacionada con el caso, incluyendo:
-  </p>
-
-  <ul>
-    <li>Nombre de la persona desaparecida.</li>
-    <li>Fecha de desaparición.</li>
-    <li>Lugar o circunstancias de la desaparición.</li>
-    <li>Descripción física.</li>
-    <li>Fotografías.</li>
-    <li>Información adicional relevante para identificar a la persona.</li>
-  </ul>
-
-  <h3>Información del reportante</h3>
-
-  <p>
-    Para permitir comunicaciones relacionadas con el reporte,
-    Huellas puede solicitar:
-  </p>
-
-  <ul>
-    <li>Número de teléfono.</li>
-    <li>Dirección de correo electrónico.</li>
-  </ul>
-
-  <p>
-    Estos datos pueden utilizarse para solicitar información adicional,
-    proporcionar actualizaciones relacionadas con el reporte o realizar
-    verificaciones necesarias.
-  </p>
-
-  <h3>Avistamientos</h3>
-
-  <p>
-    Los usuarios también pueden proporcionar información relacionada
-    con posibles avistamientos de una persona reportada como
-    desaparecida.
-  </p>
-</section>
-
-<section>
-  <h2>3. Cómo utilizamos la información</h2>
-
-  <p>
-    La información proporcionada a través de Huellas puede utilizarse
-    para:
-  </p>
-
-  <ul>
-    <li>Recibir y gestionar reportes de personas desaparecidas.</li>
-    <li>Verificar la información recibida.</li>
-    <li>Publicar información de casos que hayan sido validados.</li>
-    <li>Facilitar la búsqueda y localización de personas desaparecidas.</li>
-    <li>Recibir y gestionar reportes de posibles avistamientos.</li>
-    <li>Contactar al reportante cuando sea necesario.</li>
-    <li>Prevenir reportes fraudulentos, duplicados o abusivos.</li>
-    <li>Mantener la seguridad y funcionamiento de la plataforma.</li>
-    <li>Cumplir obligaciones legales cuando corresponda.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>4. Información publicada públicamente</h2>
-
-  <p>
-    Huellas puede publicar determinados datos de un caso cuando este
-    haya sido validado y se encuentre activo dentro de la plataforma.
-  </p>
-
-  <p>
-    La información pública puede incluir datos necesarios para ayudar
-    a identificar a la persona desaparecida y facilitar su localización,
-    como nombre, fotografía, descripción, fecha y lugar de desaparición
-    y otra información relevante.
-  </p>
-
-  <div class="important">
-    <strong>Importante:</strong> Los usuarios deben evitar proporcionar
-    información innecesaria, sensible o de terceros que no sea relevante
-    para el propósito del reporte.
+  <div class="brand">
+    <div class="brand-icon">👣</div>
+    <div>
+      <div class="brand-name">Huellas</div>
+      <div class="brand-tagline">Cada rastro cuenta</div>
+    </div>
   </div>
 
-  <p>
-    La información enviada puede ser revisada antes de su publicación.
-    No todos los datos proporcionados por un reportante son
-    necesariamente publicados.
-  </p>
-</section>
-
-<section>
-  <h2>5. Información de contacto del reportante</h2>
+  <h1>Política de Privacidad</h1>
 
   <p>
-    El correo electrónico y número telefónico proporcionados por un
-    reportante se utilizan principalmente para facilitar la
-    comunicación relacionada con el caso.
+    En Huellas nos comprometemos a proteger la privacidad de las personas
+    y a utilizar la información únicamente para contribuir a la búsqueda
+    y localización de personas desaparecidas.
   </p>
 
-  <p>
-    Estos datos no se publican como parte de la información pública
-    del caso, salvo que exista una razón legal válida o autorización
-    correspondiente.
-  </p>
-</section>
+  <div class="last-updated">
+    Última actualización: 31 de mayo de 2026
+  </div>
 
-<section>
-  <h2>6. Compartición de información</h2>
+</div>
+```
 
-  <p>
-    Huellas no vende ni alquila información personal de los usuarios
-    con fines comerciales.
-  </p>
+  </header>
 
-  <p>
-    La información puede ser compartida cuando resulte necesario para:
-  </p>
+  <main class="page">
 
-  <ul>
-    <li>Gestionar y verificar un caso.</li>
-    <li>Facilitar la localización de una persona desaparecida.</li>
-    <li>Responder a requerimientos de autoridades competentes.</li>
-    <li>Cumplir una obligación legal.</li>
-    <li>Proteger la seguridad de los usuarios o de la plataforma.</li>
-    <li>Investigar actividades fraudulentas o abusivas.</li>
-  </ul>
-</section>
+```
+<div class="card">
 
-<section>
-  <h2>7. Almacenamiento y seguridad</h2>
+  <div class="intro">
+    <p>
+      Esta Política de Privacidad explica cómo <strong>Huellas</strong>,
+      desarrollada por <strong>NovaRoot Technologies</strong>, recopila,
+      utiliza y protege la información proporcionada por los usuarios de
+      la aplicación.
+    </p>
 
-  <p>
-    Huellas utiliza servicios tecnológicos de terceros para almacenar
-    y procesar información necesaria para el funcionamiento de la
-    plataforma.
-  </p>
+    <p>
+      Al utilizar Huellas, aceptas las prácticas descritas en esta
+      política.
+    </p>
 
-  <p>
-    Se aplican medidas técnicas y administrativas razonables para
-    proteger la información contra acceso no autorizado, pérdida,
-    alteración o divulgación indebida.
-  </p>
+    <div class="highlight-grid">
 
-  <p>
-    Sin embargo, ningún sistema de almacenamiento o transmisión de
-    información a través de Internet puede garantizar seguridad
-    absoluta.
-  </p>
-</section>
+      <div class="highlight">
+        <div class="highlight-icon">🔒</div>
+        <strong>Sin cuentas</strong>
+        <span>
+          La aplicación no requiere crear una cuenta para utilizar sus
+          funciones principales.
+        </span>
+      </div>
 
-<section>
-  <h2>8. Almacenamiento local</h2>
+      <div class="highlight">
+        <div class="highlight-icon">🛡️</div>
+        <strong>Uso responsable</strong>
+        <span>
+          La información se utiliza exclusivamente para apoyar casos de
+          personas desaparecidas.
+        </span>
+      </div>
 
-  <p>
-    La aplicación puede utilizar almacenamiento local en el dispositivo
-    para conservar determinados datos necesarios para su funcionamiento.
-  </p>
+      <div class="highlight">
+        <div class="highlight-icon">🚫</div>
+        <strong>Sin publicidad</strong>
+        <span>
+          Huellas no utiliza publicidad personalizada basada en los datos
+          de los usuarios.
+        </span>
+      </div>
 
-  <p>
-    Estos datos pueden permanecer en el dispositivo hasta que el usuario
-    elimine los datos de la aplicación o desinstale la aplicación,
-    dependiendo de la función utilizada.
-  </p>
-</section>
+    </div>
+  </div>
 
-<section>
-  <h2>9. Cuenta de usuario</h2>
+  <div class="content">
 
-  <p>
-    La aplicación ciudadana Huellas no requiere una cuenta de usuario
-    tradicional para consultar casos públicos o enviar un reporte.
-  </p>
+    <section>
+      <h2>1. Información que recopilamos</h2>
 
-  <p>
-    Algunas funciones internas de administración de la plataforma
-    pueden requerir autenticación y están restringidas al personal
-    autorizado.
-  </p>
-</section>
+      <p>
+        Huellas puede recopilar información que los usuarios proporcionan
+        voluntariamente al utilizar determinadas funciones de la
+        aplicación.
+      </p>
 
-<section>
-  <h2>10. Fotografías</h2>
+      <h3>Reportes de personas desaparecidas</h3>
 
-  <p>
-    Los usuarios pueden proporcionar fotografías relacionadas con una
-    persona desaparecida o con un posible avistamiento.
-  </p>
+      <p>
+        Cuando un usuario presenta un reporte, puede proporcionar
+        información relacionada con la persona desaparecida, incluyendo,
+        según corresponda:
+      </p>
 
-  <p>
-    El usuario debe asegurarse de tener derecho a proporcionar las
-    fotografías y de que su envío sea relevante para el propósito del
-    reporte.
-  </p>
+      <ul>
+        <li>Nombre o información identificativa de la persona desaparecida.</li>
+        <li>Fecha y lugar de desaparición.</li>
+        <li>Descripción física.</li>
+        <li>Fotografías.</li>
+        <li>Información adicional relevante para la búsqueda.</li>
+      </ul>
 
-  <p>
-    Las fotografías pueden ser revisadas antes de hacerse públicas.
-  </p>
-</section>
+      <h3>Avistamientos</h3>
 
-<section>
-  <h2>11. Retención de información</h2>
+      <p>
+        Los usuarios pueden proporcionar información sobre posibles
+        avistamientos, incluyendo detalles del lugar, fecha, descripción
+        y otra información relevante.
+      </p>
 
-  <p>
-    La información puede conservarse durante el tiempo necesario para
-    administrar un caso, mantener registros de auditoría, garantizar
-    la seguridad de la plataforma y cumplir obligaciones legales.
-  </p>
+      <h3>Información de contacto</h3>
 
-  <p>
-    Un caso puede dejar de mostrarse públicamente sin que ello implique
-    necesariamente la eliminación inmediata de todos los registros
-    internos asociados.
-  </p>
-</section>
+      <p>
+        Cuando sea necesario para proporcionar actualizaciones relacionadas
+        con un reporte, Huellas puede solicitar un número de teléfono y/o
+        una dirección de correo electrónico.
+      </p>
+    </section>
 
-<section>
-  <h2>12. Solicitudes relacionadas con datos personales</h2>
+    <section>
+      <h2>2. Cómo utilizamos la información</h2>
 
-  <p>
-    Si una persona considera que sus datos personales fueron utilizados
-    de forma incorrecta o desea realizar una consulta relacionada con
-    la información procesada por Huellas, puede comunicarse con
-    NovaRoot Technologies.
-  </p>
+      <p>
+        La información recopilada se utiliza principalmente para:
+      </p>
 
-  <p>
-    Las solicitudes serán evaluadas de acuerdo con la naturaleza de la
-    información, las obligaciones legales aplicables y la necesidad
-    de conservar información relacionada con casos de personas
-    desaparecidas.
-  </p>
-</section>
+      <ul>
+        <li>Registrar y gestionar reportes de personas desaparecidas.</li>
+        <li>Facilitar la búsqueda y localización de personas.</li>
+        <li>Recibir y gestionar posibles avistamientos.</li>
+        <li>Contactar al reportante cuando sea necesario.</li>
+        <li>Mostrar públicamente información de casos que hayan sido validados y publicados.</li>
+        <li>Mejorar la seguridad y funcionamiento de la plataforma.</li>
+        <li>Detectar y prevenir reportes duplicados o abusivos.</li>
+      </ul>
 
-<section>
-  <h2>13. Privacidad de menores</h2>
+      <div class="notice">
+        <strong>Importante:</strong>
+        Huellas no utiliza la información recopilada para publicidad
+        personalizada ni para vender información personal a terceros.
+      </div>
+    </section>
 
-  <p>
-    Huellas no está diseñada específicamente para recopilar información
-    personal de menores con fines comerciales.
-  </p>
+    <section>
+      <h2>3. Información pública</h2>
 
-  <p>
-    Cuando un reporte involucre a una persona menor de edad, los usuarios
-    deben proporcionar únicamente la información necesaria para ayudar
-    a su identificación y localización.
-  </p>
-</section>
+      <p>
+        Los casos que hayan sido revisados y activados para búsqueda
+        pública pueden aparecer dentro de Huellas y en sus servicios
+        públicos asociados.
+      </p>
 
-<section>
-  <h2>14. Servicios de terceros</h2>
+      <p>
+        La información publicada puede incluir datos necesarios para
+        identificar a la persona desaparecida y facilitar su localización,
+        tales como fotografías, nombre, descripción, fecha o lugar de
+        desaparición y actualizaciones relevantes.
+      </p>
 
-  <p>
-    Huellas puede utilizar proveedores tecnológicos externos para
-    infraestructura, almacenamiento, autenticación, comunicaciones
-    y otros servicios necesarios para operar la plataforma.
-  </p>
+      <p>
+        No toda la información proporcionada durante un reporte se publica.
+        La información utilizada internamente para gestionar el caso puede
+        permanecer restringida.
+      </p>
+    </section>
 
-  <p>
-    Estos proveedores pueden procesar información únicamente en la
-    medida necesaria para proporcionar los servicios correspondientes
-    y están sujetos a sus propias políticas y condiciones.
-  </p>
-</section>
+    <section>
+      <h2>4. Almacenamiento y seguridad</h2>
 
-<section>
-  <h2>15. Cambios a esta Política de Privacidad</h2>
+      <p>
+        Huellas utiliza servicios de infraestructura tecnológica para
+        almacenar y procesar la información necesaria para el
+        funcionamiento de la plataforma.
+      </p>
 
-  <p>
-    Esta Política de Privacidad puede actualizarse periódicamente para
-    reflejar cambios en Huellas, en sus servicios, en los requisitos
-    legales o en las prácticas de tratamiento de información.
-  </p>
+      <p>
+        Se aplican medidas técnicas y administrativas razonables para
+        proteger la información contra acceso no autorizado, modificación,
+        divulgación o destrucción.
+      </p>
 
-  <p>
-    Cuando se realicen cambios importantes, se actualizará la fecha de
-    "Última actualización" indicada al comienzo de esta política.
-  </p>
-</section>
+      <p>
+        Sin embargo, ningún sistema conectado a Internet puede garantizar
+        una seguridad absoluta.
+      </p>
+    </section>
 
-<section class="contact">
-  <h2>16. Contacto</h2>
+    <section>
+      <h2>5. Compartición de información</h2>
 
-  <p>
-    Para preguntas, comentarios o solicitudes relacionadas con esta
-    Política de Privacidad, puedes contactar a:
-  </p>
+      <p>
+        Huellas no vende, alquila ni comercializa información personal de
+        los usuarios.
+      </p>
 
-  <p>
-    <strong>NovaRoot Technologies</strong>
-  </p>
+      <p>
+        La información puede ser compartida cuando sea necesario para:
+      </p>
 
-  <p>
-    <a href="mailto:novarootrd@gmail.com">
-      novarootrd@gmail.com
-    </a>
-  </p>
-</section>
+      <ul>
+        <li>Publicar un caso validado para facilitar su localización.</li>
+        <li>Gestionar un reporte o avistamiento.</li>
+        <li>Cumplir obligaciones legales.</li>
+        <li>Responder a solicitudes legítimas de autoridades competentes.</li>
+        <li>Proteger la seguridad de los usuarios y de la plataforma.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Retención de información</h2>
+
+      <p>
+        Conservamos la información durante el tiempo necesario para
+        gestionar los casos, mantener registros operativos y cumplir con
+        obligaciones legales o de seguridad.
+      </p>
+
+      <p>
+        Algunos registros pueden mantenerse durante períodos adicionales
+        con fines de auditoría, seguridad o integridad histórica del
+        sistema.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Eliminación y solicitudes relacionadas con datos</h2>
+
+      <p>
+        Los usuarios pueden solicitar información sobre los datos
+        personales asociados a un reporte que hayan proporcionado.
+      </p>
+
+      <p>
+        También pueden solicitar la corrección o eliminación de información
+        cuando corresponda y cuando dicha eliminación no entre en conflicto
+        con obligaciones legales, necesidades de seguridad o integridad de
+        un caso activo.
+      </p>
+
+      <div class="contact">
+        <strong>Para realizar una solicitud:</strong><br>
+        Envía un correo electrónico a
+        <a href="mailto:novarootrd@gmail.com">
+          novarootrd@gmail.com
+        </a>
+        indicando claramente el motivo de la solicitud y la información
+        relacionada con el reporte.
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Menores de edad</h2>
+
+      <p>
+        Huellas está destinada a facilitar la gestión y difusión
+        responsable de información relacionada con personas desaparecidas.
+      </p>
+
+      <p>
+        No solicitamos deliberadamente información personal de menores para
+        fines distintos de los relacionados con un caso de desaparición,
+        búsqueda o localización.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Servicios de terceros</h2>
+
+      <p>
+        Huellas puede utilizar proveedores tecnológicos externos para
+        alojar, procesar o transmitir información necesaria para prestar
+        sus servicios.
+      </p>
+
+      <p>
+        Estos proveedores pueden procesar información bajo sus propias
+        políticas y condiciones de servicio. Huellas procura utilizar
+        proveedores que implementen medidas razonables de seguridad y
+        protección de datos.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Cambios a esta política</h2>
+
+      <p>
+        Esta Política de Privacidad puede actualizarse cuando sea necesario
+        para reflejar cambios en Huellas, en sus servicios o en los
+        requisitos legales aplicables.
+      </p>
+
+      <p>
+        Cuando se realicen cambios importantes, se actualizará la fecha de
+        última modificación indicada al inicio de esta página.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Contacto</h2>
+
+      <p>
+        Si tienes preguntas, comentarios o solicitudes relacionadas con
+        esta Política de Privacidad o con el tratamiento de información
+        dentro de Huellas, puedes comunicarte con nosotros:
+      </p>
+
+      <div class="contact">
+        <strong>NovaRoot Technologies</strong><br><br>
+
+        Aplicación:
+        <strong>Huellas — Cada rastro cuenta</strong><br>
+
+        Correo electrónico:
+        <a href="mailto:novarootrd@gmail.com">
+          novarootrd@gmail.com
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+</div>
 ```
 
   </main>
 
-  <footer>
-    <p>
-      © 2026 NovaRoot Technologies. Todos los derechos reservados.
-    </p>
-
-```
-<p>
-  Huellas — Cada rastro cuenta
-</p>
-```
-
+  <footer class="footer">
+    <strong>Huellas — Cada rastro cuenta</strong>
+    <br>
+    © 2026 NovaRoot Technologies. Todos los derechos reservados.
+    <br>
+    <a class="back-top" href="#top">Volver arriba ↑</a>
   </footer>
 
 </body>
