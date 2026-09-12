@@ -2,665 +2,789 @@
 
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Política de Privacidad — Huellas</title>
+```
+<title>Política de Privacidad | Huellas</title>
 
-  <meta name="description" content="Política de privacidad de Huellas — Cada rastro cuenta.">
-  <meta name="theme-color" content="#0B416F">
+<meta name="description" content="Política de Privacidad de la aplicación Huellas — Cada rastro cuenta.">
+<meta name="theme-color" content="#0B4778">
 
-  <style>
+<style>
     :root {
-      --primary: #0B416F;
-      --primary-dark: #073454;
-      --primary-light: #EAF3F9;
-      --accent: #2C7DB5;
-      --text: #243746;
-      --muted: #647482;
-      --background: #F5F8FB;
-      --surface: #FFFFFF;
-      --border: #E1E8EE;
-      --success: #2E7D5B;
-      --shadow: 0 10px 30px rgba(11, 65, 111, 0.08);
-      --radius: 18px;
+        --primary: #0B4778;
+        --primary-dark: #073456;
+        --primary-light: #EAF4FB;
+        --accent: #2E8BBA;
+        --text: #243746;
+        --muted: #667784;
+        --background: #F4F8FB;
+        --card: #FFFFFF;
+        --border: #DCE7EE;
+        --success-bg: #ECF8F1;
+        --success-text: #176B45;
+        --shadow: 0 10px 35px rgba(11, 71, 120, 0.08);
     }
 
     * {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     html {
-      scroll-behavior: smooth;
+        scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.7;
+        margin: 0;
+        font-family:
+            Inter,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.75;
     }
 
     a {
-      color: var(--accent);
-      text-decoration: none;
+        color: var(--primary);
+        text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+        text-decoration: underline;
     }
+
+    /* HEADER */
 
     .hero {
-      background: linear-gradient(
-        135deg,
-        var(--primary-dark) 0%,
-        var(--primary) 55%,
-        #145B8E 100%
-      );
-      color: white;
-      padding: 64px 20px 72px;
+        background:
+            linear-gradient(
+                135deg,
+                var(--primary-dark) 0%,
+                var(--primary) 55%,
+                #146B9E 100%
+            );
+        color: white;
+        padding: 58px 20px 90px;
     }
 
-    .hero-container {
-      max-width: 920px;
-      margin: 0 auto;
+    .hero-inner {
+        max-width: 1050px;
+        margin: 0 auto;
     }
 
     .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 28px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 55px;
     }
 
     .brand-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.13);
+        border: 1px solid rgba(255,255,255,0.22);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
     }
 
     .brand-name {
-      font-size: 25px;
-      font-weight: 750;
-      letter-spacing: -0.4px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
     }
 
     .brand-tagline {
-      font-size: 13px;
-      opacity: 0.78;
-      margin-top: 1px;
+        font-size: 13px;
+        opacity: 0.75;
     }
 
     .hero h1 {
-      font-size: clamp(34px, 6vw, 52px);
-      line-height: 1.1;
-      margin: 0 0 18px;
-      letter-spacing: -1.5px;
+        max-width: 800px;
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 54px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0;
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.88);
+    .hero-subtitle {
+        max-width: 720px;
+        margin: 0;
+        font-size: 18px;
+        opacity: 0.88;
     }
 
-    .last-updated {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.86);
+    .updated {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 26px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.18);
+        font-size: 13px;
     }
 
-    .page {
-      max-width: 920px;
-      margin: -28px auto 60px;
-      padding: 0 20px;
-      position: relative;
+    /* MAIN */
+
+    .container {
+        max-width: 1050px;
+        margin: -48px auto 80px;
+        padding: 0 20px;
+        position: relative;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+    .layout {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
     }
 
-    .intro {
-      padding: 30px 34px;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(
-        180deg,
-        #FFFFFF 0%,
-        #FBFDFF 100%
-      );
+    /* SIDEBAR */
+
+    .sidebar {
+        position: sticky;
+        top: 24px;
     }
 
-    .intro strong {
-      color: var(--primary);
+    .toc {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: var(--shadow);
     }
+
+    .toc-title {
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--muted);
+        margin-bottom: 12px;
+    }
+
+    .toc a {
+        display: block;
+        padding: 7px 9px;
+        border-radius: 8px;
+        font-size: 13px;
+        color: var(--text);
+    }
+
+    .toc a:hover {
+        background: var(--primary-light);
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    /* CONTENT */
 
     .content {
-      padding: 10px 34px 38px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    .content-inner {
+        padding: 45px 52px;
     }
 
     section {
-      padding: 30px 0;
-      border-bottom: 1px solid var(--border);
+        scroll-margin-top: 25px;
     }
 
-    section:last-child {
-      border-bottom: none;
+    section + section {
+        border-top: 1px solid var(--border);
+        margin-top: 42px;
+        padding-top: 42px;
     }
 
     h2 {
-      margin: 0 0 14px;
-      color: var(--primary);
-      font-size: 23px;
-      line-height: 1.3;
-      letter-spacing: -0.3px;
+        margin: 0 0 18px;
+        font-size: 25px;
+        line-height: 1.3;
+        color: var(--primary-dark);
+        letter-spacing: -0.4px;
     }
 
     h3 {
-      color: var(--primary-dark);
-      font-size: 17px;
-      margin: 22px 0 8px;
+        margin: 26px 0 8px;
+        font-size: 17px;
+        color: var(--primary);
     }
 
     p {
-      margin: 0 0 14px;
+        margin: 0 0 16px;
     }
 
     ul {
-      margin: 10px 0 16px;
-      padding-left: 24px;
+        padding-left: 22px;
     }
 
     li {
-      margin-bottom: 8px;
+        margin-bottom: 8px;
     }
 
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin: 22px 0 8px;
+    /* INTRO */
+
+    .intro {
+        background: var(--primary-light);
+        border-left: 4px solid var(--primary);
+        border-radius: 10px;
+        padding: 20px 22px;
+        margin-bottom: 38px;
     }
 
-    .highlight {
-      background: var(--primary-light);
-      border: 1px solid #D7E6F1;
-      border-radius: 14px;
-      padding: 18px;
+    .intro strong {
+        color: var(--primary-dark);
     }
 
-    .highlight-icon {
-      font-size: 22px;
-      margin-bottom: 8px;
+    /* HIGHLIGHT */
+
+    .privacy-points {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin: 25px 0;
     }
 
-    .highlight strong {
-      display: block;
-      color: var(--primary-dark);
-      margin-bottom: 4px;
+    .point {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px;
+        background: #FBFDFF;
     }
 
-    .highlight span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
+    .point-title {
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 4px;
     }
+
+    .point-text {
+        font-size: 14px;
+        color: var(--muted);
+    }
+
+    /* NOTICE */
 
     .notice {
-      margin: 18px 0;
-      padding: 17px 19px;
-      border-left: 4px solid var(--accent);
-      border-radius: 10px;
-      background: #F1F7FB;
-      color: var(--text);
+        background: var(--success-bg);
+        color: var(--success-text);
+        border: 1px solid #CBE9D9;
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-top: 20px;
     }
+
+    /* CONTACT */
 
     .contact {
-      background: linear-gradient(
-        135deg,
-        #F0F6FA,
-        #F8FBFD
-      );
-      border: 1px solid #DCE8F0;
-      border-radius: 15px;
-      padding: 22px;
-      margin-top: 16px;
+        background: linear-gradient(
+            135deg,
+            #F0F7FC,
+            #F8FBFD
+        );
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 24px;
+        margin-top: 20px;
     }
 
-    .contact strong {
-      color: var(--primary);
+    .email {
+        display: inline-block;
+        margin-top: 5px;
+        font-weight: 700;
+        font-size: 17px;
     }
 
-    .footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      padding: 30px 20px 45px;
+    /* FOOTER */
+
+    footer {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 0 20px 45px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
     }
 
-    .footer strong {
-      color: var(--primary);
+    .footer-brand {
+        color: var(--primary-dark);
+        font-weight: 700;
     }
 
-    .back-top {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 13px;
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+        .hero {
+            padding: 38px 18px 75px;
+        }
+
+        .brand {
+            margin-bottom: 38px;
+        }
+
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            position: static;
+        }
+
+        .toc {
+            display: none;
+        }
+
+        .container {
+            padding: 0 12px;
+            margin-top: -35px;
+        }
+
+        .content-inner {
+            padding: 32px 24px;
+        }
+
+        .privacy-points {
+            grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+        }
     }
 
-    @media (max-width: 700px) {
-      .hero {
-        padding: 45px 18px 58px;
-      }
+    @media (max-width: 450px) {
 
-      .hero p {
-        font-size: 16px;
-      }
+        .content {
+            border-radius: 15px;
+        }
 
-      .page {
-        padding: 0 12px;
-        margin-top: -20px;
-      }
+        .content-inner {
+            padding: 27px 19px;
+        }
 
-      .intro {
-        padding: 24px 21px;
-      }
-
-      .content {
-        padding: 6px 21px 25px;
-      }
-
-      section {
-        padding: 25px 0;
-      }
-
-      h2 {
-        font-size: 21px;
-      }
-
-      .highlight-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .brand-name {
-        font-size: 22px;
-      }
+        h2 {
+            font-size: 22px;
+        }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+</style>
+```
 
 </head>
 
-<body id="top">
+<body>
 
-  <header class="hero">
-    <div class="hero-container">
+<header class="hero">
+    <div class="hero-inner">
 
 ```
-  <div class="brand">
-    <div class="brand-icon">👣</div>
-    <div>
-      <div class="brand-name">Huellas</div>
-      <div class="brand-tagline">Cada rastro cuenta</div>
+    <div class="brand">
+        <div class="brand-icon">⌁</div>
+
+        <div>
+            <div class="brand-name">Huellas</div>
+            <div class="brand-tagline">Cada rastro cuenta</div>
+        </div>
     </div>
-  </div>
 
-  <h1>Política de Privacidad</h1>
+    <h1>Política de Privacidad</h1>
 
-  <p>
-    En Huellas nos comprometemos a proteger la privacidad de las personas
-    y a utilizar la información únicamente para contribuir a la búsqueda
-    y localización de personas desaparecidas.
-  </p>
+    <p class="hero-subtitle">
+        Información clara sobre cómo Huellas recopila, utiliza,
+        protege y gestiona la información relacionada con la aplicación.
+    </p>
 
-  <div class="last-updated">
-    Última actualización: 31 de mayo de 2026
-  </div>
+    <div class="updated">
+        Última actualización: 31 de mayo de 2026
+    </div>
 
 </div>
 ```
 
-  </header>
+</header>
 
-  <main class="page">
+<main class="container">
 
 ```
-<div class="card">
+<div class="layout">
 
-  <div class="intro">
-    <p>
-      Esta Política de Privacidad explica cómo <strong>Huellas</strong>,
-      desarrollada por <strong>NovaRoot Technologies</strong>, recopila,
-      utiliza y protege la información proporcionada por los usuarios de
-      la aplicación.
-    </p>
+    <aside class="sidebar">
 
-    <p>
-      Al utilizar Huellas, aceptas las prácticas descritas en esta
-      política.
-    </p>
+        <nav class="toc">
 
-    <div class="highlight-grid">
+            <div class="toc-title">
+                Contenido
+            </div>
 
-      <div class="highlight">
-        <div class="highlight-icon">🔒</div>
-        <strong>Sin cuentas</strong>
-        <span>
-          La aplicación no requiere crear una cuenta para utilizar sus
-          funciones principales.
-        </span>
-      </div>
+            <a href="#general">1. Información general</a>
+            <a href="#informacion">2. Información recopilada</a>
+            <a href="#uso">3. Uso de la información</a>
+            <a href="#publicacion">4. Información pública</a>
+            <a href="#ubicacion">5. Ubicación</a>
+            <a href="#comparticion">6. Compartición</a>
+            <a href="#seguridad">7. Seguridad</a>
+            <a href="#retencion">8. Conservación</a>
+            <a href="#derechos">9. Derechos</a>
+            <a href="#menores">10. Menores</a>
+            <a href="#cambios">11. Cambios</a>
+            <a href="#contacto">12. Contacto</a>
 
-      <div class="highlight">
-        <div class="highlight-icon">🛡️</div>
-        <strong>Uso responsable</strong>
-        <span>
-          La información se utiliza exclusivamente para apoyar casos de
-          personas desaparecidas.
-        </span>
-      </div>
+        </nav>
 
-      <div class="highlight">
-        <div class="highlight-icon">🚫</div>
-        <strong>Sin publicidad</strong>
-        <span>
-          Huellas no utiliza publicidad personalizada basada en los datos
-          de los usuarios.
-        </span>
-      </div>
+    </aside>
 
-    </div>
-  </div>
 
-  <div class="content">
+    <article class="content">
 
-    <section>
-      <h2>1. Información que recopilamos</h2>
+        <div class="content-inner">
 
-      <p>
-        Huellas puede recopilar información que los usuarios proporcionan
-        voluntariamente al utilizar determinadas funciones de la
-        aplicación.
-      </p>
+            <section id="general">
 
-      <h3>Reportes de personas desaparecidas</h3>
+                <div class="intro">
 
-      <p>
-        Cuando un usuario presenta un reporte, puede proporcionar
-        información relacionada con la persona desaparecida, incluyendo,
-        según corresponda:
-      </p>
+                    <strong>Huellas — Cada rastro cuenta.</strong>
 
-      <ul>
-        <li>Nombre o información identificativa de la persona desaparecida.</li>
-        <li>Fecha y lugar de desaparición.</li>
-        <li>Descripción física.</li>
-        <li>Fotografías.</li>
-        <li>Información adicional relevante para la búsqueda.</li>
-      </ul>
+                    <p style="margin-top:8px; margin-bottom:0;">
+                        Huellas es una aplicación orientada a facilitar
+                        la publicación, consulta y comunicación de
+                        información relacionada con personas desaparecidas
+                        y posibles avistamientos.
+                    </p>
 
-      <h3>Avistamientos</h3>
+                </div>
 
-      <p>
-        Los usuarios pueden proporcionar información sobre posibles
-        avistamientos, incluyendo detalles del lugar, fecha, descripción
-        y otra información relevante.
-      </p>
+                <h2>1. Información general</h2>
 
-      <h3>Información de contacto</h3>
+                <p>
+                    Esta Política de Privacidad describe cómo
+                    <strong>NovaRoot Technologies</strong> gestiona la
+                    información utilizada por la aplicación Huellas.
+                </p>
 
-      <p>
-        Cuando sea necesario para proporcionar actualizaciones relacionadas
-        con un reporte, Huellas puede solicitar un número de teléfono y/o
-        una dirección de correo electrónico.
-      </p>
-    </section>
+                <p>
+                    Al utilizar Huellas, usted acepta las prácticas
+                    descritas en esta política.
+                </p>
 
-    <section>
-      <h2>2. Cómo utilizamos la información</h2>
+            </section>
 
-      <p>
-        La información recopilada se utiliza principalmente para:
-      </p>
 
-      <ul>
-        <li>Registrar y gestionar reportes de personas desaparecidas.</li>
-        <li>Facilitar la búsqueda y localización de personas.</li>
-        <li>Recibir y gestionar posibles avistamientos.</li>
-        <li>Contactar al reportante cuando sea necesario.</li>
-        <li>Mostrar públicamente información de casos que hayan sido validados y publicados.</li>
-        <li>Mejorar la seguridad y funcionamiento de la plataforma.</li>
-        <li>Detectar y prevenir reportes duplicados o abusivos.</li>
-      </ul>
+            <section id="informacion">
 
-      <div class="notice">
-        <strong>Importante:</strong>
-        Huellas no utiliza la información recopilada para publicidad
-        personalizada ni para vender información personal a terceros.
-      </div>
-    </section>
+                <h2>2. Información que podemos recopilar</h2>
 
-    <section>
-      <h2>3. Información pública</h2>
+                <p>
+                    Dependiendo de las funciones utilizadas, Huellas
+                    puede procesar información proporcionada
+                    voluntariamente por los usuarios.
+                </p>
 
-      <p>
-        Los casos que hayan sido revisados y activados para búsqueda
-        pública pueden aparecer dentro de Huellas y en sus servicios
-        públicos asociados.
-      </p>
+                <div class="privacy-points">
 
-      <p>
-        La información publicada puede incluir datos necesarios para
-        identificar a la persona desaparecida y facilitar su localización,
-        tales como fotografías, nombre, descripción, fecha o lugar de
-        desaparición y actualizaciones relevantes.
-      </p>
+                    <div class="point">
+                        <div class="point-title">
+                            Reportes
+                        </div>
 
-      <p>
-        No toda la información proporcionada durante un reporte se publica.
-        La información utilizada internamente para gestionar el caso puede
-        permanecer restringida.
-      </p>
-    </section>
+                        <div class="point-text">
+                            Información necesaria para registrar un
+                            reporte de persona desaparecida.
+                        </div>
+                    </div>
 
-    <section>
-      <h2>4. Almacenamiento y seguridad</h2>
+                    <div class="point">
+                        <div class="point-title">
+                            Avistamientos
+                        </div>
 
-      <p>
-        Huellas utiliza servicios de infraestructura tecnológica para
-        almacenar y procesar la información necesaria para el
-        funcionamiento de la plataforma.
-      </p>
+                        <div class="point-text">
+                            Información proporcionada para comunicar
+                            un posible avistamiento.
+                        </div>
+                    </div>
 
-      <p>
-        Se aplican medidas técnicas y administrativas razonables para
-        proteger la información contra acceso no autorizado, modificación,
-        divulgación o destrucción.
-      </p>
+                    <div class="point">
+                        <div class="point-title">
+                            Fotografías
+                        </div>
 
-      <p>
-        Sin embargo, ningún sistema conectado a Internet puede garantizar
-        una seguridad absoluta.
-      </p>
-    </section>
+                        <div class="point-text">
+                            Imágenes que el usuario decide adjuntar
+                            voluntariamente a un reporte o comunicación.
+                        </div>
+                    </div>
 
-    <section>
-      <h2>5. Compartición de información</h2>
+                    <div class="point">
+                        <div class="point-title">
+                            Datos de contacto
+                        </div>
 
-      <p>
-        Huellas no vende, alquila ni comercializa información personal de
-        los usuarios.
-      </p>
+                        <div class="point-text">
+                            Teléfono y correo electrónico cuando sean
+                            necesarios para mantener informado al
+                            usuario sobre un reporte.
+                        </div>
+                    </div>
 
-      <p>
-        La información puede ser compartida cuando sea necesario para:
-      </p>
+                </div>
 
-      <ul>
-        <li>Publicar un caso validado para facilitar su localización.</li>
-        <li>Gestionar un reporte o avistamiento.</li>
-        <li>Cumplir obligaciones legales.</li>
-        <li>Responder a solicitudes legítimas de autoridades competentes.</li>
-        <li>Proteger la seguridad de los usuarios y de la plataforma.</li>
-      </ul>
-    </section>
+            </section>
 
-    <section>
-      <h2>6. Retención de información</h2>
 
-      <p>
-        Conservamos la información durante el tiempo necesario para
-        gestionar los casos, mantener registros operativos y cumplir con
-        obligaciones legales o de seguridad.
-      </p>
+            <section id="uso">
 
-      <p>
-        Algunos registros pueden mantenerse durante períodos adicionales
-        con fines de auditoría, seguridad o integridad histórica del
-        sistema.
-      </p>
-    </section>
+                <h2>3. Cómo utilizamos la información</h2>
 
-    <section>
-      <h2>7. Eliminación y solicitudes relacionadas con datos</h2>
+                <p>
+                    La información proporcionada se utiliza únicamente
+                    para las funciones relacionadas con Huellas,
+                    incluyendo:
+                </p>
 
-      <p>
-        Los usuarios pueden solicitar información sobre los datos
-        personales asociados a un reporte que hayan proporcionado.
-      </p>
+                <ul>
+                    <li>Registrar y gestionar reportes.</li>
+                    <li>Facilitar la comunicación relacionada con un reporte.</li>
+                    <li>Procesar información sobre posibles avistamientos.</li>
+                    <li>Mostrar información pública de casos cuando corresponda.</li>
+                    <li>Mejorar la seguridad y funcionamiento del servicio.</li>
+                </ul>
 
-      <p>
-        También pueden solicitar la corrección o eliminación de información
-        cuando corresponda y cuando dicha eliminación no entre en conflicto
-        con obligaciones legales, necesidades de seguridad o integridad de
-        un caso activo.
-      </p>
+                <div class="notice">
+                    Huellas no utiliza la información recopilada para
+                    publicidad personalizada.
+                </div>
 
-      <div class="contact">
-        <strong>Para realizar una solicitud:</strong><br>
-        Envía un correo electrónico a
-        <a href="mailto:novarootrd@gmail.com">
-          novarootrd@gmail.com
-        </a>
-        indicando claramente el motivo de la solicitud y la información
-        relacionada con el reporte.
-      </div>
-    </section>
+            </section>
 
-    <section>
-      <h2>8. Menores de edad</h2>
 
-      <p>
-        Huellas está destinada a facilitar la gestión y difusión
-        responsable de información relacionada con personas desaparecidas.
-      </p>
+            <section id="publicacion">
 
-      <p>
-        No solicitamos deliberadamente información personal de menores para
-        fines distintos de los relacionados con un caso de desaparición,
-        búsqueda o localización.
-      </p>
-    </section>
+                <h2>4. Información publicada públicamente</h2>
 
-    <section>
-      <h2>9. Servicios de terceros</h2>
+                <p>
+                    Algunos datos de un reporte pueden hacerse públicos
+                    cuando sea necesario para apoyar la búsqueda de una
+                    persona desaparecida.
+                </p>
 
-      <p>
-        Huellas puede utilizar proveedores tecnológicos externos para
-        alojar, procesar o transmitir información necesaria para prestar
-        sus servicios.
-      </p>
+                <p>
+                    La información pública puede incluir datos relacionados
+                    con el caso, fotografías y actualizaciones que hayan
+                    sido autorizadas para su publicación.
+                </p>
 
-      <p>
-        Estos proveedores pueden procesar información bajo sus propias
-        políticas y condiciones de servicio. Huellas procura utilizar
-        proveedores que implementen medidas razonables de seguridad y
-        protección de datos.
-      </p>
-    </section>
+                <p>
+                    No se publica información privada de contacto del
+                    reportante como parte de la información pública del caso.
+                </p>
 
-    <section>
-      <h2>10. Cambios a esta política</h2>
+            </section>
 
-      <p>
-        Esta Política de Privacidad puede actualizarse cuando sea necesario
-        para reflejar cambios en Huellas, en sus servicios o en los
-        requisitos legales aplicables.
-      </p>
 
-      <p>
-        Cuando se realicen cambios importantes, se actualizará la fecha de
-        última modificación indicada al inicio de esta página.
-      </p>
-    </section>
+            <section id="ubicacion">
 
-    <section>
-      <h2>11. Contacto</h2>
+                <h2>5. Información de ubicación</h2>
 
-      <p>
-        Si tienes preguntas, comentarios o solicitudes relacionadas con
-        esta Política de Privacidad o con el tratamiento de información
-        dentro de Huellas, puedes comunicarte con nosotros:
-      </p>
+                <p>
+                    Huellas puede procesar información relacionada con
+                    la ubicación cuando dicha información sea proporcionada
+                    voluntariamente como parte de un reporte o avistamiento.
+                </p>
 
-      <div class="contact">
-        <strong>NovaRoot Technologies</strong><br><br>
+                <p>
+                    La información de ubicación se utiliza para ayudar
+                    a contextualizar el reporte correspondiente.
+                </p>
 
-        Aplicación:
-        <strong>Huellas — Cada rastro cuenta</strong><br>
+            </section>
 
-        Correo electrónico:
-        <a href="mailto:novarootrd@gmail.com">
-          novarootrd@gmail.com
-        </a>
-      </div>
-    </section>
 
-  </div>
+            <section id="comparticion">
+
+                <h2>6. Compartición de información</h2>
+
+                <p>
+                    Huellas no vende información personal de los usuarios.
+                </p>
+
+                <p>
+                    La información puede ser procesada por proveedores
+                    tecnológicos necesarios para operar el servicio,
+                    como infraestructura de almacenamiento y base de datos.
+                </p>
+
+                <p>
+                    Cuando la naturaleza del caso lo requiera, la
+                    información pública de una persona desaparecida puede
+                    ser consultada por cualquier persona que utilice
+                    la aplicación o sus servicios públicos.
+                </p>
+
+            </section>
+
+
+            <section id="seguridad">
+
+                <h2>7. Seguridad</h2>
+
+                <p>
+                    Se aplican medidas técnicas y administrativas
+                    razonables para proteger la información contra
+                    acceso, modificación, divulgación o destrucción
+                    no autorizados.
+                </p>
+
+                <p>
+                    Sin embargo, ningún sistema conectado a Internet
+                    puede garantizar una seguridad absoluta.
+                </p>
+
+            </section>
+
+
+            <section id="retencion">
+
+                <h2>8. Conservación de la información</h2>
+
+                <p>
+                    La información se conserva durante el tiempo necesario
+                    para proporcionar las funciones de Huellas, cumplir
+                    obligaciones legales y mantener registros relacionados
+                    con la seguridad e integridad del servicio.
+                </p>
+
+                <p>
+                    Los casos pueden ser retirados de la información pública
+                    sin necesariamente implicar la eliminación inmediata
+                    de todos los registros internos asociados.
+                </p>
+
+            </section>
+
+
+            <section id="derechos">
+
+                <h2>9. Derechos de los usuarios</h2>
+
+                <p>
+                    Los usuarios pueden solicitar información sobre el
+                    tratamiento de sus datos o plantear solicitudes
+                    relacionadas con su información personal.
+                </p>
+
+                <p>
+                    Para realizar una solicitud, utilice el correo
+                    electrónico indicado en la sección de contacto.
+                </p>
+
+            </section>
+
+
+            <section id="menores">
+
+                <h2>10. Menores de edad</h2>
+
+                <p>
+                    Huellas no está diseñada específicamente para recopilar
+                    información personal de menores con fines comerciales.
+                </p>
+
+                <p>
+                    Cuando un reporte involucre a una persona menor de edad,
+                    la información debe ser proporcionada únicamente cuando
+                    exista una razón legítima para comunicar la desaparición
+                    o un posible avistamiento.
+                </p>
+
+            </section>
+
+
+            <section id="cambios">
+
+                <h2>11. Cambios a esta política</h2>
+
+                <p>
+                    Esta Política de Privacidad puede actualizarse cuando
+                    sea necesario para reflejar cambios en Huellas,
+                    requisitos legales o prácticas de privacidad.
+                </p>
+
+                <p>
+                    La fecha de actualización indicada al inicio de esta
+                    página será modificada cuando se publique una nueva
+                    versión.
+                </p>
+
+            </section>
+
+
+            <section id="contacto">
+
+                <h2>12. Contacto</h2>
+
+                <div class="contact">
+
+                    <p>
+                        Si tiene preguntas, comentarios o solicitudes
+                        relacionadas con esta Política de Privacidad,
+                        puede comunicarse con nosotros:
+                    </p>
+
+                    <strong>NovaRoot Technologies</strong>
+
+                    <br>
+
+                    <a class="email"
+                       href="mailto:novarootrd@gmail.com">
+                        novarootrd@gmail.com
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </article>
 
 </div>
 ```
 
-  </main>
+</main>
 
-  <footer class="footer">
-    <strong>Huellas — Cada rastro cuenta</strong>
-    <br>
-    © 2026 NovaRoot Technologies. Todos los derechos reservados.
-    <br>
-    <a class="back-top" href="#top">Volver arriba ↑</a>
-  </footer>
+<footer>
+
+```
+<span class="footer-brand">Huellas</span>
+— Cada rastro cuenta.
+
+<br>
+
+© 2026 NovaRoot Technologies. Todos los derechos reservados.
+```
+
+</footer>
 
 </body>
 </html>
